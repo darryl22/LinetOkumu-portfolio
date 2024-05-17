@@ -193,22 +193,19 @@ function App() {
             <div className="current-reads">
               <img src={impactplayers} alt="impactplayers" style={{width: "100%", display: "block"}}/>
               <div className="books-overlay">
-                <p>Impact Players</p>
-                <p>Liz Wiseman</p>
+                <p style={{margin: "10px"}}>In Impact Players, New York Times bestselling author and researcher Liz Wiseman reveals the secrets of these stellar professionals who play the game at a higher level.</p>
               </div>
             </div>
             <div className="current-reads">
               <img src={multipliersbook} alt="multipliersbook" style={{width: "100%", display: "block"}}/>
               <div className="books-overlay">
-                <p>Multipliers</p>
-                <p>Liz Wiseman</p>
+                <p style={{margin: "10px"}}>Multipliers by Liz Wiseman is a leadership book that highlights the difference between diminishers and multipliers. It shows how to create a culture of empowerment, where the team members feel valued and can unleash their full potential.</p>
               </div>
             </div>
             <div className="current-reads">
               <img src={rightkindbook} alt="rightkindbook" style={{width: "100%", display: "block"}}/>
               <div className="books-overlay">
-                <p>Right Kind of Wrong</p>
-                <p>Amy Edmondson</p>
+                <p style={{margin: "10px"}}>A revolutionary guide that will transform your relationship with failure, from the pioneering researcher of psychological safety and award-winning Harvard Business School professor Amy Edmondson.</p>
               </div>
             </div>
           </div>
