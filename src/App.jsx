@@ -1,32 +1,69 @@
+import React from 'react'
 import './App.css'
 import management from './assets/management.png'
 import Accordion from './components/Accordion'
+import hultprize from './assets/hult-prize.png'
+import impactplayers from "./assets/impact-players-book.jpg"
+import multipliersbook from './assets/multipliers-book.jpg'
+import rightkindbook from './assets/right-kind-book.jpg'
+import menu from './assets/menu.png'
+import close from './assets/close.png'
 
 function App() {
 
+  const [menuOpen, setMenuOpen] = React.useState(false)
+
+  function toggleMenu() {
+    setMenuOpen(prev => {
+      return !prev
+    })
+  }
+
+  const leftContentStyle = {
+    // transform: menuOpen ? "scaleX(1)" : "scaleX(0)"
+    width: menuOpen ? "80vw" : "0vw"
+  }
+
   return (
     <div className='main-content-div'>
+      <img src={menu} alt="menu-icon" className='menu-icon' onClick={toggleMenu}/>
+
       <div className="left-content-div">
         <div className="profile-image"></div>
         <h2 style={{fontFamily: "'Playfair Display SC', serif", fontSize: "2em", marginBottom: "0em"}}>Linet Okumu</h2>
         <p><span style={{color: "#2c98f0"}}>TRAINING MANAGER</span> IN THE UAE</p>
         <div className="nav-links-div">
-          <a href="#home" className="nav-links">HOME</a>
           <a href="#about" className="nav-links">ABOUT</a>
-          <a href="#services" className="nav-links">SERVICES</a>
-          <a href="#skills" className="nav-links">SKILLS</a>
+          <a href="#skills" className="nav-links">EXPERTISE</a>
           <a href="#education" className="nav-links">EDUCATION</a>
           <a href="#experience" className="nav-links">EXPERIENCE</a>
-          <a href="#work" className="nav-links">WORK</a>
+          <a href="#volunteerwork" className="nav-links">VOLUNTEER WORK</a>
+          <a href="#currentreads" className="nav-links">CURRENT READS</a>
         </div>
       </div>
+
+      <div className="left-content-div2" style={leftContentStyle}>
+        <img src={close} alt="close-menu" className='close-menu' onClick={toggleMenu}/>
+        <div className="profile-image"></div>
+        <h2 style={{fontFamily: "'Playfair Display SC', serif", fontSize: "2em", marginBottom: "0em"}}>Linet Okumu</h2>
+        <p><span style={{color: "#2c98f0"}}>TRAINING MANAGER</span> IN THE UAE</p>
+        <div className="nav-links-div">
+          <a href="#about" className="nav-links" onClick={() => setMenuOpen(false)}>ABOUT</a>
+          <a href="#skills" className="nav-links" onClick={() => setMenuOpen(false)}>EXPERTISE</a>
+          <a href="#education" className="nav-links" onClick={() => setMenuOpen(false)}>EDUCATION</a>
+          <a href="#experience" className="nav-links" onClick={() => setMenuOpen(false)}>EXPERIENCE</a>
+          <a href="#volunteerwork" className="nav-links" onClick={() => setMenuOpen(false)}>VOLUNTEER WORK</a>
+          <a href="#currentreads" className="nav-links" onClick={() => setMenuOpen(false)}>CURRENT READS</a>
+        </div>
+      </div>
+      
       <div className="right-content-div">
         <div className="right-content-header">
           <h1 style={{fontSize: "3em", fontFamily: "'Playfair Display SC', serif"}}>Hi!<br/> I'm Linet Okumu.</h1>
           <button className='right-content-button'>DOWNLOAD CV</button>
         </div>
         <div style={{margin: "0px 2em"}}>
-          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}}>ABOUT</p>
+          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}} id='about'>ABOUT</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>WHO AM I</p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
             Linet is a Kenyan citizen with over 21 years of experience in the Aviation industry, having resided 
@@ -43,22 +80,20 @@ function App() {
             mentoring to family, friends, colleagues, and students. She is inspired to make a positive impact on the future of 
             work. She has received many Awards and Honors for her professional and volunteer work.
           </p>
-          <div className="expertise-div" style={{marginBottom: "6em", marginTop: "3em"}}>
+          <div className="expertise-div" style={{marginBottom: "6em", marginTop: "3em"}} id='skills'>
             <div className="expertise" style={{borderBottom: "2px solid blue"}}>
-              <img src={management} alt="management" style={{height: "2em"}}/>
-              <p>Leadership and management essentials</p>
+              <img src={management} alt="management" style={{height: "2.5em"}}/>
+              <p style={{fontWeight: "bold"}}>Leadership and management essentials</p>
             </div>
             <div className="expertise" style={{borderBottom: "2px solid green"}}>
-              <img src={management} alt="management" style={{height: "2em"}}/>
-              <p>High potential leaders</p>
+              <img src={management} alt="management" style={{height: "2.5em"}}/>
+              <p style={{fontWeight: "bold"}}>High potential leaders</p>
             </div>
           </div>
           <div className="parallax">
-            <p>one</p>
-            <p>two</p>
-            <p>three</p>
+            <p>Over 20 years of experience</p>
           </div>
-          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}}>EDUCATION AND CERTIFICATIONS</p>
+          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}} id='education'>EDUCATION AND CERTIFICATIONS</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>EDUCATION</p>
 
           <div className="education" style={{marginBottom: "6em"}}>
@@ -72,38 +107,111 @@ function App() {
             <Accordion textContent="Degree: Bachelor of arts 1998 - 2002. 2nd Class Honours Upper Division" title="Maseno University - Kenya"/>
           </div>
 
-          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}}>WORK EXPERIENCE</p>
+          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}} id='experience'>WORK EXPERIENCE</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>WORK EXPERIENCE</p>
 
           <div className="timeline" style={{marginBottom: "4em"}}>
             <div className="timeline-container left-arrow">
               <div className="timeline-content">
-                <h2 style={{marginTop: "10px"}}>Title</h2>
+                <div style={{display: "flex", flexDirection: "column"}}>
+                  <h2 style={{marginTop: "10px", marginBottom: "10px"}}>Training Manager</h2>
+                  <p style={{marginTop: "0px", color: "gray"}}>EMIRATES</p>
+                </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sint dignissimos doloremque? Natus soluta voluptatum, mollitia possimus expedita deserunt iste.</p>
               </div>
             </div>
             <div className="timeline-container left-arrow">
               <div className="timeline-content">
-                <h2 style={{marginTop: "10px"}}>Title</h2>
+                <div style={{display: "flex", flexDirection: "column"}}>
+                  <h2 style={{marginTop: "10px", marginBottom: "10px"}}>Training Specialist</h2>
+                  <p style={{marginTop: "0px", color: "gray"}}>EMIRATES</p>
+                </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sint dignissimos doloremque? Natus soluta voluptatum, mollitia possimus expedita deserunt iste.</p>
               </div>
             </div>
             <div className="timeline-container left-arrow">
               <div className="timeline-content">
-                <h2 style={{marginTop: "10px"}}>Title</h2>
+                <div style={{display: "flex", flexDirection: "column"}}>
+                  <h2 style={{marginTop: "10px", marginBottom: "10px"}}>Training Officer</h2>
+                  <p style={{marginTop: "0px", color: "gray"}}>EMIRATES</p>
+                </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sint dignissimos doloremque? Natus soluta voluptatum, mollitia possimus expedita deserunt iste.</p>
               </div>
             </div>
             <div className="timeline-container left-arrow">
               <div className="timeline-content">
-                <h2 style={{marginTop: "10px"}}>Title</h2>
+                <div style={{display: "flex", flexDirection: "column"}}>
+                  <h2 style={{marginTop: "10px", marginBottom: "10px"}}>Crew Trainer</h2>
+                  <p style={{marginTop: "0px", color: "gray"}}>EMIRATES</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sint dignissimos doloremque? Natus soluta voluptatum, mollitia possimus expedita deserunt iste.</p>
+              </div>
+            </div>
+            <div className="timeline-container left-arrow">
+              <div className="timeline-content">
+                <div style={{display: "flex", flexDirection: "column"}}>
+                  <h2 style={{marginTop: "10px", marginBottom: "10px"}}>Service Delivery - Inflight Services</h2>
+                  <p style={{marginTop: "0px", color: "gray"}}>EMIRATES</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sint dignissimos doloremque? Natus soluta voluptatum, mollitia possimus expedita deserunt iste.</p>
+              </div>
+            </div>
+            <div className="timeline-container left-arrow">
+              <div className="timeline-content">
+                <div style={{display: "flex", flexDirection: "column"}}>
+                  <h2 style={{marginTop: "10px", marginBottom: "10px"}}>Part Time Local Tutor</h2>
+                  <p style={{marginTop: "0px", color: "gray"}}>EDITH COWAN UNIVERSITY</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sint dignissimos doloremque? Natus soluta voluptatum, mollitia possimus expedita deserunt iste.</p>
+              </div>
+            </div>
+            <div className="timeline-container left-arrow">
+              <div className="timeline-content">
+                <div style={{display: "flex", flexDirection: "column"}}>
+                  <h2 style={{marginTop: "10px", marginBottom: "10px"}}>Management Trainee Programme</h2>
+                  <p style={{marginTop: "0px", color: "gray"}}>BARCLAYS BANK</p>
+                </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sint dignissimos doloremque? Natus soluta voluptatum, mollitia possimus expedita deserunt iste.</p>
               </div>
             </div>
           </div>
 
-          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}}>VOLUNTEER WORK</p>
-          <p style={{fontSize: "1.2em", marginBottom: "3em"}}>VOLUNTEER WORK</p>
+          <p style={{fontSize: "0.9em", marginBottom: "3em", color: "rgba(0, 0, 0, 0.6)"}} id='volunteerwork'>VOLUNTEER WORK</p>
+          <p style={{fontSize: "1.2em", marginBottom: "0em"}}>HULT Prize 2022</p>
+          <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)", marginBottom: "2em"}}>
+            Nomination by my University Alumna to serve as Judge at the 2022 Hult-Prize On-Campus competition. An annual competition that supports and encourages creative ideas from university level students globally who are challenged to solve a pressing social issue. The Prize won ($1,000,000) is a partnership between Hult International Business School and the United Nations foundation.
+          </p>
+          <img src={hultprize} alt="hultprize" style={{width: "60%", marginBottom: "2em"}}/>
+          <p style={{fontSize: "1.2em", marginBottom: "0em"}}>Peer Support Services for Flight and Cabin crew 2008 - 2024</p>
+          <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
+          A trained Mental Health First Aider and Peer Supporter. Provided emotional support to Flight and Cabin Crew following critical incidents.
+          </p>
+
+          <p style={{fontSize: "0.9em", marginBottom: "0em", color: "rgba(0, 0, 0, 0.6)", marginTop: "5em"}} id='currentreads'>CURRENT READS</p>
+          <p style={{fontSize: "1.2em", marginBottom: "3em"}}>CURRENT READS</p>
+          <div className="current-reads-div">
+            <div className="current-reads">
+              <img src={impactplayers} alt="impactplayers" style={{width: "100%", display: "block"}}/>
+              <div className="books-overlay">
+                <p>Impact Players</p>
+                <p>Liz Wiseman</p>
+              </div>
+            </div>
+            <div className="current-reads">
+              <img src={multipliersbook} alt="multipliersbook" style={{width: "100%", display: "block"}}/>
+              <div className="books-overlay">
+                <p>Multipliers</p>
+                <p>Liz Wiseman</p>
+              </div>
+            </div>
+            <div className="current-reads">
+              <img src={rightkindbook} alt="rightkindbook" style={{width: "100%", display: "block"}}/>
+              <div className="books-overlay">
+                <p>Right Kind of Wrong</p>
+                <p>Amy Edmondson</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
