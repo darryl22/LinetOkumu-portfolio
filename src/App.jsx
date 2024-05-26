@@ -8,6 +8,15 @@ import multipliersbook from './assets/multipliers-book.jpg'
 import rightkindbook from './assets/right-kind-book.jpg'
 import menu from './assets/menu.png'
 import close from './assets/close.png'
+import harvardlogo from './assets/harvardbusiness-school.png'
+import hultlogo from './assets/hultbusinessschool.jpg'
+import leicterlogo from './assets/universityofleicter.png'
+import harvardonline from './assets/harvardbusiness-schoolonline.png'
+import ecu from './assets/ecu-australia.png'
+import cipd from './assets/cipd.png'
+import iata from './assets/iata.png'
+import maseno from './assets/maseno.png'
+
 
 function App() {
 
@@ -97,14 +106,14 @@ function App() {
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>EDUCATION</p>
 
           <div className="education" style={{marginBottom: "6em"}}>
-            <Accordion textContent="Developing yourself as a leader. January - April 2024" title="Harvard Business School Executive Education"/>
-            <Accordion textContent="Executive MBA 2019 - 2021" title="HULT International Business School"/>
-            <Accordion textContent="Masters: Post graduate diploma in Business Administration 2008 - 2013" title="University of Leicester - UK"/>
-            <Accordion textContent="Becoming a better manager - Management Essentials 2018" title="Harvard Business School Online"/>
-            <Accordion textContent="University Diploma in Aviation Security Management 2006 - 2007. Distinction" title="Edith Cowan University"/>
-            <Accordion textContent="CIPD 2014 - 2025" title="Chartered Institute of Personnel and Development Practice"/>
-            <Accordion textContent="Leadership and management diploma 2014 - 2015, Diploma in Airline studies 2003 - 2005. Distinction" title="IATA Training"/>
-            <Accordion textContent="Degree: Bachelor of arts 1998 - 2002. 2nd Class Honours Upper Division" title="Maseno University - Kenya"/>
+            <Accordion textContent="Developing yourself as a leader. January - April 2024" title="Harvard Business School Executive Education" image={harvardlogo}/>
+            <Accordion textContent="Executive MBA 2019 - 2021" title="HULT International Business School" image={hultlogo}/>
+            <Accordion textContent="Masters: Post graduate diploma in Business Administration 2008 - 2013" title="University of Leicester - UK" image={leicterlogo}/>
+            <Accordion textContent="Becoming a better manager - Management Essentials 2018" title="Harvard Business School Online" image={harvardonline}/>
+            <Accordion textContent="University Diploma in Aviation Security Management 2006 - 2007. Distinction" title="Edith Cowan University" image={ecu}/>
+            <Accordion textContent="CIPD 2014 - 2025" title="Chartered Institute of Personnel and Development Practice" image={cipd}/>
+            <Accordion textContent="Leadership and management diploma 2014 - 2015, Diploma in Airline studies 2003 - 2005. Distinction" title="IATA Training" image={iata}/>
+            <Accordion textContent="Degree: Bachelor of arts 1998 - 2002. 2nd Class Honours Upper Division" title="Maseno University - Kenya" image={maseno}/>
           </div>
 
           <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}} id='experience'>WORK EXPERIENCE</p>
