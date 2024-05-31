@@ -145,10 +145,26 @@
     gap: 2em;
 }
 
+.expertise-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 205, 104);
+    padding: 30px;
+    width: fit-content;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
 .expertise{
     flex: 1;
     box-shadow: 0px 0px 20px 10px rgb(225, 225, 225);
-    padding: 1em;
+    padding: 0em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
 }
 
 .parallax{
@@ -284,6 +300,11 @@
     opacity: 1;
 }
 
+.hultprize-image{
+    width: 60%;
+    margin-bottom: 2em;
+}
+
 @media screen and (max-width: 1200px) {
     .main-content-div{
         width: 100%;
@@ -318,5 +339,14 @@
 
     .current-reads-div{
         flex-direction: column;
+    }
+
+    .expertise-div{
+        flex-direction: column;
+        gap: 5em;
+    }
+
+    .hultprize-image{
+        width: 100%;
     }
 }
