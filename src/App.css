@@ -121,7 +121,7 @@
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
     padding: 2em;
     aspect-ratio: 1 / 1;
@@ -265,7 +265,8 @@
 
 .current-reads-div{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
     margin-bottom: 3em;
 }
@@ -338,7 +339,7 @@
     }
 
     .current-reads-div{
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .expertise-div{

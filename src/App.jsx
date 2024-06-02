@@ -8,6 +8,7 @@ import hultprize2 from './assets/hultimage2.jpg'
 import impactplayers from "./assets/impact-players-book.jpg"
 import multipliersbook from './assets/multipliers-book.jpg'
 import rightkindbook from './assets/right-kind-book.jpg'
+import lastingimpressions from './assets/lasting-impressions.jpeg'
 import menu from './assets/menu.png'
 import close from './assets/close.png'
 import harvardlogo from './assets/harvardbusiness-school.png'
@@ -73,11 +74,10 @@ function App() {
       
       <div className="right-content-div">
         <div className="right-content-header">
-          <button className='right-content-button'>DOWNLOAD CV</button>
           <h1 style={{fontSize: "3em", fontFamily: "'Playfair Display SC', serif"}}>Hi!<br/> I'm Linet Okumu.</h1>
         </div>
         <div style={{margin: "0px 2em"}}>
-          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}} id='about'>ABOUT</p>
+          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='about'>ABOUT</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>WHO AM I</p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
             Linet is a Professional with over 21 years of experience in the Aviation industry, having resided 
@@ -96,7 +96,7 @@ function App() {
           </p>
           <p style={{fontWeight: "bold"}}>"We pay a high interest for the mistakes we make with people"</p>
 
-          <p style={{fontSize: "0.9em", marginTop: "3em", color: "rgba(0, 0, 0, 0.6)"}} id='expertise'>EXPERTISE</p>
+          <p style={{fontSize: "0.9em", marginTop: "3em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='skills'>EXPERTISE</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>EXPERTISE</p>
 
           <div className="expertise-div" style={{marginBottom: "6em", marginTop: "3em"}} id='skills'>
@@ -157,7 +157,7 @@ function App() {
           {/* <video width="500" height="400">
             <source src="https://youtu.be/gwCRNKFlzw4" type="video/mp4" />
           </video> */}
-          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}} id='education'>EDUCATION AND CERTIFICATIONS</p>
+          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='education'>EDUCATION AND CERTIFICATIONS</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>EDUCATION</p>
 
           <div className="education" style={{marginBottom: "6em"}}>
@@ -171,7 +171,7 @@ function App() {
             <Accordion textContent="Degree: Bachelor of Arts 1998 - 2002. 2nd Class Honours Upper Division" title="Maseno University - Kenya" image={maseno}/>
           </div>
 
-          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)"}} id='experience'>WORK EXPERIENCE</p>
+          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='experience'>WORK EXPERIENCE</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>WORK EXPERIENCE</p>
 
           <div className="timeline" style={{marginBottom: "4em"}}>
@@ -263,7 +263,7 @@ function App() {
             </div>
           </div>
 
-          <p style={{fontSize: "0.9em", marginBottom: "3em", color: "rgba(0, 0, 0, 0.6)"}} id='volunteerwork'>VOLUNTEER WORK</p>
+          <p style={{fontSize: "0.9em", marginBottom: "3em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='volunteerwork'>VOLUNTEER WORK</p>
           <p style={{fontSize: "1.2em", marginBottom: "0em"}}>HULT Prize 2022</p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)", marginBottom: "2em"}}>
             Nomination by my University Alumna to serve as Judge at the 2022 Hult-Prize On-Campus competition. An annual competition that supports and encourages creative ideas from university level students globally who are challenged to solve a pressing social issue. The Prize won ($1,000,000) is a partnership between Hult International Business School and the United Nations foundation.
@@ -275,14 +275,6 @@ function App() {
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
           A trained Mental Health First Aider and Peer Supporter. Provided emotional support to Flight and Cabin Crew following critical incidents.
           </p>
-
-          <p style={{fontSize: "1.2em", marginBottom: "0em"}}>peer support services</p>
-          <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
-            Continual support to a registered local community programme, supporting school learning events during term breaks in 
-            Kenya, to embrace the continual learning culture for under privileged children. The programme oversees over 100 children 
-            engaged in productive initiatives during long periods of absence from school, which include environmental activities, 
-            safe play and learning through the library.
-          </p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
             Supported over 300 employees in March and April 2020 during Covid-19 pandemic by providing peer-to-peer support to lessen the impact of post traumatic-stress.
           </p>
@@ -290,11 +282,19 @@ function App() {
             Nominated Guest Speaker at the 2018 2nd International Peer Support Celebration Day that focused on Mental Health Awareness, 
             attended by over 90 employees from Emirates Airline, Fly Dubai, and Etihad Airways.
           </p>
+
+          <p style={{fontSize: "1.2em", marginBottom: "0em"}}>Community Development</p>
+          <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
+            Continual support to a registered local community programme, supporting school learning events during term breaks in 
+            Kenya, to embrace the continual learning culture for under privileged children. The programme oversees over 100 children 
+            engaged in productive initiatives during long periods of absence from school, which include environmental activities, 
+            safe play and learning through the library.
+          </p>
           <img src={volunteerwork1} alt="hultprize" className='hultprize-image'/>
           <img src={volunteerwork2} alt="hultprize" className='hultprize-image'/>
           <img src={volunteerwork3} alt="hultprize" className='hultprize-image'/>
 
-          <p style={{fontSize: "0.9em", marginBottom: "0em", color: "rgba(0, 0, 0, 0.6)", marginTop: "5em"}} id='currentreads'>CURRENT READS</p>
+          <p style={{fontSize: "0.9em", marginBottom: "0em", color: "rgba(0, 0, 0, 0.6)", marginTop: "5em", scrollMarginTop: "50px"}} id='currentreads'>CURRENT READS</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>CURRENT READS</p>
           <div className="current-reads-div">
             <div className="current-reads">
@@ -313,6 +313,12 @@ function App() {
               <img src={rightkindbook} alt="rightkindbook" style={{width: "100%", display: "block"}}/>
               <div className="books-overlay">
                 <p style={{margin: "10px"}}>A revolutionary guide that will transform your relationship with failure, from the pioneering researcher of psychological safety and award-winning Harvard Business School professor Amy Edmondson.</p>
+              </div>
+            </div>
+            <div className="current-reads">
+              <img src={lastingimpressions} alt="lastingimpressions" style={{width: "100%", display: "block"}}/>
+              <div className="books-overlay">
+                <p style={{margin: "10px"}}>First impressions are important, but it's the lasting impression that truly matters - the lasting impression made through service excellence.</p>
               </div>
             </div>
           </div>
