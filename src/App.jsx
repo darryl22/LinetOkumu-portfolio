@@ -1,5 +1,7 @@
 import React from 'react'
 import './App.css'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 import management from './assets/management.png'
 import Accordion from './components/Accordion'
 import hultprize from './assets/hult-prize.png'
@@ -22,6 +24,21 @@ import maseno from './assets/maseno.png'
 import volunteerwork1 from './assets/volunteerwork1.jpg'
 import volunteerwork2 from './assets/volunteerwork2.jpg'
 import volunteerwork3 from './assets/volunteerwork3.jpg'
+import educationpicture1 from './assets/educationpicture1.jpg'
+import educationpicture2 from './assets/educationpicture2.jpg'
+import educationpicture3 from './assets/educationpicture3.jpg'
+import educationpicture4 from './assets/educationpicture4.jpg'
+import educationpicture5 from './assets/educationpicture5.jpg'
+import educationpicture6 from './assets/educationpicture6.jpg'
+import educationpicture7 from './assets/educationpicture7.jpg'
+import educationpicture8 from './assets/educationpicture8.jpg'
+import educationpicture9 from './assets/educationpicture9.jpg'
+import workexperience1 from './assets/workexperience1.jpg'
+import workexperience2 from './assets/workexperience2.jpg'
+import workexperience3 from './assets/workexperience3.jpg'
+import bookpicture1 from './assets/bookpicture1.jpg'
+import bookpicture2 from './assets/bookpicture2.jpg'
+import bookpicture3 from './assets/bookpicture3.jpg'
 
 
 function App() {
@@ -37,6 +54,20 @@ function App() {
   const leftContentStyle = {
     // transform: menuOpen ? "scaleX(1)" : "scaleX(0)"
     width: menuOpen ? "80vw" : "0vw"
+  }
+  const responsiveCarousel = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 2
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
   }
 
   return (
@@ -112,15 +143,15 @@ function App() {
               </p>
             </div>
             <div className="expertise" style={{borderBottom: "2px solid green"}}>
-              <div className='expertise-circle' style={{backgroundColor: "rgb(149, 255, 147)"}}>
+              <div className='expertise-circle' style={{backgroundColor: "rgb(255, 205, 104)"}}>
                 <img src={management} alt="management" style={{height: "2.5em"}}/>
               </div>
-              <p style={{fontWeight: "bold"}}>Professional and Personal Branding</p>
+              <p style={{fontWeight: "bold"}}>Talent Management Fundamentals</p>
               <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
-                Professional and personal branding is about self-discovery. Everyone has a brand, and there is a personal choice to 
-                be made on whether and how to protect and invest in the brand. It is important to know how to create, elevate and 
-                pitch a professional and personal brand, and understand what your personal balance sheet [not financial] tells you 
-                about your brand.
+                The ability to identify unique potentials within the team and empower them to perform is critical to talent 
+                management and development. A leader should be able to manage talent transitions and talent life cycles. This 
+                calls for a specific cultural mindset at various levels within the organisation. What do we learn from the 
+                lens of the world view? 
               </p>
             </div>
           </div>
@@ -138,15 +169,15 @@ function App() {
               </p>
             </div>
             <div className="expertise" style={{borderBottom: "2px solid green"}}>
-              <div className='expertise-circle' style={{backgroundColor: "rgb(255, 205, 104)"}}>
+              <div className='expertise-circle' style={{backgroundColor: "rgb(149, 255, 147)"}}>
                 <img src={management} alt="management" style={{height: "2.5em"}}/>
               </div>
-              <p style={{fontWeight: "bold"}}>Talent Management Fundamentals</p>
+              <p style={{fontWeight: "bold"}}>Professional and Personal Branding</p>
               <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
-                The ability to identify unique potentials within the team and empower them to perform is critical to talent 
-                management and development. A leader should be able to manage talent transitions and talent life cycles. This 
-                calls for a specific cultural mindset at various levels within the organisation. What do we learn from the 
-                lens of the world view? 
+                Professional and personal branding is about self-discovery. Everyone has a brand, and there is a personal choice to 
+                be made on whether and how to protect and invest in the brand. It is important to know how to create, elevate and 
+                pitch a professional and personal brand, and understand what your personal balance sheet [not financial] tells you 
+                about your brand.
               </p>
             </div>
           </div>
@@ -160,7 +191,19 @@ function App() {
           <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='education'>EDUCATION AND CERTIFICATIONS</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>EDUCATION</p>
 
-          <div className="education" style={{marginBottom: "6em"}}>
+          <Carousel responsive={responsiveCarousel}>
+            <div className="carousel-div" style={{backgroundImage: `url(${educationpicture1})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${educationpicture2})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${educationpicture3})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${educationpicture4})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${educationpicture5})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${educationpicture6})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${educationpicture7})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${educationpicture8})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${educationpicture9})`}}></div>
+          </Carousel>
+
+          <div className="education" style={{marginBottom: "6em", marginTop: "3em"}}>
             <Accordion textContent="Developing Yourself As A Leader. January - April 2024" title="Harvard Business School Executive Education" image={harvardlogo}/>
             <Accordion textContent="Executive MBA 2019 - 2021" title="HULT International Business School" image={hultlogo}/>
             <Accordion textContent="Masters: Post Graduate Diploma in Business Administration 2008 - 2013" title="University of Leicester - UK" image={leicterlogo}/>
@@ -174,7 +217,13 @@ function App() {
           <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='experience'>WORK EXPERIENCE</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>WORK EXPERIENCE</p>
 
-          <div className="timeline" style={{marginBottom: "4em"}}>
+          <Carousel responsive={responsiveCarousel}>
+            <div className="carousel-div" style={{backgroundImage: `url(${workexperience1})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${workexperience2})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${workexperience3})`}}></div>
+          </Carousel>
+
+          <div className="timeline" style={{marginBottom: "4em", marginTop: "4em"}}>
             <div className="timeline-container left-arrow">
               <div className="timeline-content">
                 <div style={{display: "flex", flexDirection: "column"}}>
@@ -264,13 +313,18 @@ function App() {
           </div>
 
           <p style={{fontSize: "0.9em", marginBottom: "3em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='volunteerwork'>VOLUNTEER WORK</p>
+
           <p style={{fontSize: "1.2em", marginBottom: "0em"}}>HULT Prize 2022</p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)", marginBottom: "2em"}}>
             Nomination by my University Alumna to serve as Judge at the 2022 Hult-Prize On-Campus competition. An annual competition that supports and encourages creative ideas from university level students globally who are challenged to solve a pressing social issue. The Prize won ($1,000,000) is a partnership between Hult International Business School and the United Nations foundation.
           </p>
-          <img src={hultprize} alt="hultprize" className='hultprize-image'/>
-          <img src={hultprize1} alt="hultprize" className='hultprize-image'/>
-          <img src={hultprize2} alt="hultprize" className='hultprize-image'/>
+          
+          <Carousel responsive={responsiveCarousel}>
+            <div className="carousel-div" style={{backgroundImage: `url(${hultprize})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${hultprize1})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${hultprize2})`}}></div>
+          </Carousel>
+
           <p style={{fontSize: "1.2em", marginBottom: "0em"}}>Peer Support Services for Flight and Cabin crew 2008 - 2024</p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
           A trained Mental Health First Aider and Peer Supporter. Provided emotional support to Flight and Cabin Crew following critical incidents.
@@ -290,9 +344,12 @@ function App() {
             engaged in productive initiatives during long periods of absence from school, which include environmental activities, 
             safe play and learning through the library.
           </p>
-          <img src={volunteerwork1} alt="hultprize" className='hultprize-image'/>
-          <img src={volunteerwork2} alt="hultprize" className='hultprize-image'/>
-          <img src={volunteerwork3} alt="hultprize" className='hultprize-image'/>
+
+          <Carousel responsive={responsiveCarousel}>
+            <div className="carousel-div" style={{backgroundImage: `url(${volunteerwork1})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${volunteerwork2})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${volunteerwork3})`}}></div>
+          </Carousel>
 
           <p style={{fontSize: "0.9em", marginBottom: "0em", color: "rgba(0, 0, 0, 0.6)", marginTop: "5em", scrollMarginTop: "50px"}} id='currentreads'>CURRENT READS</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>CURRENT READS</p>
@@ -322,6 +379,13 @@ function App() {
               </div>
             </div>
           </div>
+
+          <Carousel responsive={responsiveCarousel}>
+            <div className="carousel-div" style={{backgroundImage: `url(${bookpicture1})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${bookpicture2})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${bookpicture3})`}}></div>
+          </Carousel>
+
           <div style={{width: "100%", height: "1px", backgroundColor: "gray", marginBottom: "2em"}}></div>
           <a href="https://www.linkedin.com/in/linet-okumu/" style={{textDecoration: "none"}}>My Linkedin</a><br />
           <p style={{marginBottom: "3em"}}>Copyright @2024 by Linet M. Okumu All Rights Reserved</p>

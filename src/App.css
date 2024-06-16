@@ -72,6 +72,16 @@
     margin-top: 3em;
 }
 
+.carousel-div{
+    height: 400px;
+    /* aspect-ratio: 1 / 1; */
+    background-image: url('./assets/hultimage1.jpg');
+    margin: 0em 0.5em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .nav-links-div{
     display: flex;
     flex-direction: column;
