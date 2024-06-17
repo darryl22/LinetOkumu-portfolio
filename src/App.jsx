@@ -105,7 +105,7 @@ function App() {
       
       <div className="right-content-div">
         <div className="right-content-header">
-          <h1 style={{fontSize: "3em", fontFamily: "'Playfair Display SC', serif"}}>Hi!<br/> I'm Linet Okumu.</h1>
+          <h1 className='header-title'>Hi!<br/> I'm Linet Okumu.</h1>
         </div>
         <div style={{margin: "0px 2em"}}>
           <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='about'>ABOUT</p>
@@ -204,22 +204,68 @@ function App() {
           </Carousel>
 
           <div className="education" style={{marginBottom: "6em", marginTop: "3em"}}>
-            <Accordion textContent="Developing Yourself As A Leader. January - April 2024" title="Harvard Business School Executive Education" image={harvardlogo}/>
-            <Accordion textContent="Executive MBA 2019 - 2021" title="HULT International Business School" image={hultlogo}/>
-            <Accordion textContent="Masters: Post Graduate Diploma in Business Administration 2008 - 2013" title="University of Leicester - UK" image={leicterlogo}/>
-            <Accordion textContent="Becoming a Better Manager - Management Essentials 2018" title="Harvard Business School Online" image={harvardonline}/>
-            <Accordion textContent="University Diploma in Aviation Security Management 2006 - 2007. Distinction" title="Edith Cowan University" image={ecu}/>
-            <Accordion textContent="CIPD 2014 - 2015" title="Chartered Institute of Personnel and Development Practice" image={cipd}/>
-            <Accordion textContent="Leadership and Management Diploma 2014 - 2015, Diploma in Airline studies 2003 - 2005. Distinction" title="IATA Training" image={iata}/>
-            <Accordion textContent="Degree: Bachelor of Arts 1998 - 2002. 2nd Class Honours Upper Division" title="Maseno University - Kenya" image={maseno}/>
+            <Accordion 
+              textContent="Developing Yourself As A Leader. January - April 2024"
+              description="Courses completed - Being ready as a High-Potential Leader, Understanding Your Leadership Profile, Design Thinking for Your Trajectory, Nurturing a Leadership Mindset, Transitions, Hire Your Next Job, Momentum, Crafting Your Story, Negotiating Your Career as a Rebel Talent, The Qualified Self, Improvising, Thriving, Coaching for Talent Development *Received Executive Coaching Sessions*."
+              title="Harvard Business School Executive Education"
+              image={harvardlogo}
+            />
+            <Accordion 
+              textContent="Executive MBA 2019 - 2021"
+              description="Courses completed - Leading with Personal Impact, Leading Globally, International Marketing, Operations Management, Financial Management, Accounting, Organisational Performance, Business Behaviour & Diversity, Change Management, Management Psychology, Leading Change, Leading for Innovation, Global Strategy, Managerial Economics, Business & Global Society, Future Mindset & Challenge, Business Law and Ethics in Practice, Crisis Management, Mitigation & Response, International Business Consulting, Talent Management."
+              title="HULT International Business School"
+              image={hultlogo}
+            />
+            <Accordion 
+              textContent="Masters: Post Graduate Diploma in Business Administration 2008 - 2013"
+              description="Courses completed - Organisational Behaviour, Strategy, Business Information & Analysis, Benchmarking, Accounting for Managers, Marketing, Design and Operations, Business ethics in a Global context."
+              title="University of Leicester - UK"
+              image={leicterlogo}
+            />
+            <Accordion 
+              textContent="Becoming a Better Manager - Management Essentials 2018"
+              description="Courses completed - A process perspective on Management, Shaping the Decision-Making process, Implementing for the present and learning for the future, Managing and Leading Change."
+              title="Harvard Business School Online"
+              image={harvardonline}
+            />
+            <Accordion 
+              textContent="Leadership and Management Diploma, Harvard Manage Mentor & IATA Aviation/Airway Management and Operations 2014 - 2015"
+              description="Courses completed - Safety Management Systems, Developing Employees, Change Management, Coaching, Leading People, Customer Focus, Writing Skills, Career Management, Delegation, Difficult Interactions."
+              title="Harvard Business School Online"
+              image={harvardonline}
+            />
+            <Accordion 
+              textContent="University Diploma in Aviation Security Management 2006 - 2007. Distinction"
+              description="Courses completed - Managing Aviation Threats and Incidents, Safeguarding the Aviation Industry, Aviation Security Operations."
+              title="Edith Cowan University"
+              image={ecu}
+            />
+            <Accordion 
+              textContent="CIPD 2014 - 2015"
+              description="Courses completed - Coaching, Mentoring, Organizational Change, Job Analysis, Human Resources, Preparing, delivering and evaluating L&D activities."
+              title="Chartered Institute of Personnel and Development Practice"
+              image={cipd}
+            />
+            <Accordion 
+              textContent="Leadership and Management Diploma 2014 - 2015"
+              description="Courses completed (2003, 2005) - Diploma in Airline Studies, Customer Care - Distinction, Station Management - Distinction, Airline Finance, Airline Marketing."
+              title="IATA Training"
+              image={iata}
+            />
+            <Accordion 
+              textContent="Degree: Bachelor of Arts 1998 - 2002. 2nd Class Honours Upper Division"
+              description="Courses completed - Bachelor of Arts Degree - 2nd Class Honors - Upper Division."
+              title="Maseno University - Kenya"
+              image={maseno}
+            />
           </div>
 
           <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='experience'>WORK EXPERIENCE</p>
           <p style={{fontSize: "1.2em", marginBottom: "3em"}}>WORK EXPERIENCE</p>
 
           <Carousel responsive={responsiveCarousel}>
-            <div className="carousel-div" style={{backgroundImage: `url(${workexperience1})`}}></div>
             <div className="carousel-div" style={{backgroundImage: `url(${workexperience2})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${workexperience1})`}}></div>
             <div className="carousel-div" style={{backgroundImage: `url(${workexperience3})`}}></div>
           </Carousel>
 
@@ -388,7 +434,7 @@ function App() {
 
           <div style={{width: "100%", height: "1px", backgroundColor: "gray", marginBottom: "2em"}}></div>
           <a href="https://www.linkedin.com/in/linet-okumu/" style={{textDecoration: "none"}}>My Linkedin</a><br />
-          <p style={{marginBottom: "3em"}}>Copyright @2024 by Linet M. Okumu All Rights Reserved</p>
+          <p style={{marginBottom: "3em"}}>Copyright @2024 All Rights Reserved</p>
         </div>
       </div>
     </div>

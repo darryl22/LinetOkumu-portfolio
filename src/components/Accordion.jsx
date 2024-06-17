@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useRef } from "react";
 
-function Accordion({title, textContent, image}) {
+function Accordion({title, textContent, image, description}) {
 
     const [open, setOpen] = useState(false)
 
@@ -27,7 +27,8 @@ function Accordion({title, textContent, image}) {
             </button>
             <div className="accordion-panel" style={accordionPanel}>
               <img src={image} alt="accordion image" style={{height: "4em"}}/>
-              <p>{textContent}</p>
+              <p style={{fontWeight: "bold"}}>{textContent}</p>
+              <p>{description}</p>
             </div>
         </div>
     )

@@ -51,6 +51,11 @@
     display: none;
 }
 
+.header-title{
+    font-size: 3em;
+    font-family: "'Playfair Display SC', serif";
+}
+
 .menu-icon{
     position: absolute;
     height: 2em;
@@ -326,6 +331,10 @@
 
     .menu-icon, .close-menu{
         display: block;
+    }
+
+    .header-title{
+        font-size: 2em;
     }
 
     .left-content-div2{
