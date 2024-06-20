@@ -2,7 +2,7 @@
   "name": "linet-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://darryl22.github.io",
+  "homepage": "https://darryl22.github.io",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
