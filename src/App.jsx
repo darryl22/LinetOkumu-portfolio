@@ -109,26 +109,24 @@ function App() {
         </div>
         <div style={{margin: "0px 2em"}}>
           <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='about'>ABOUT</p>
-          <p style={{fontSize: "1.2em", marginBottom: "3em"}}>WHO AM I</p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
             Linet is a Professional with over 21 years of experience in the Aviation industry, having resided 
-            in Dubai since 2003. An Aviation enthusiast with -depth experience and passion in Leadership, Learning 
+            in Dubai since 2003. An Aviation enthusiast with in-depth experience and passion in Leadership, Learning 
             and development and Talent Management.
           </p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
             Linet started her career in 2002 with Barclays Bank Kenya and soon after moved to Emirates Airline in 2003. Linet 
             holds an EMBA from HULT International Business School where she received the Growth Mindset Award 2021 and Dean's 
-            list academic achievement in spring 2021 and holds qualifications from other renowned institutions including Harvard Business School Executive Education where she completed the 'Developing Yourself as a Leader course' with a Distinction.
+            list academic achievement in spring 2021. She holds qualifications from other renowned institutions including Harvard Business School Executive Education where she completed the 'Developing Yourself as a Leader course' with a Distinction.
           </p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
             Linet is always paying forward through her societal charitable work and by conducting free career coaching and 
             mentoring to family, friends, colleagues, and students. She is inspired to make a positive impact on the future of 
-            work. She has received many Awards and Honors for her professional and volunteer work.
+            work. Linet has received many Awards and Honors for her professional and volunteer work.
           </p>
           <p style={{fontWeight: "bold"}}>"We pay a high interest for the mistakes we make with people"</p>
 
-          <p style={{fontSize: "0.9em", marginTop: "3em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='skills'>EXPERTISE</p>
-          <p style={{fontSize: "1.2em", marginBottom: "3em"}}>EXPERTISE</p>
+          <p style={{fontSize: "0.9em", marginTop: "3em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px", marginBottom: "5em"}} id='skills'>EXPERTISE</p>
 
           <div className="expertise-div" style={{marginBottom: "6em", marginTop: "3em"}} id='skills'>
             <div className="expertise" style={{borderBottom: "2px solid blue"}}>
@@ -137,10 +135,11 @@ function App() {
               </div>
               <p style={{fontWeight: "bold"}}>Leadership and Management Essentials</p>
               <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
-                The two most common words in the workplace and daily interactions. The transition to Leadership and Management is critical. 
+                Two common words in the workplace and daily interactions. The transition to Leadership and Management is critical. 
                 One must look at both the horizontal and vertical components of leadership and management and embrace an embodied learning 
-                of self and others. Who shapes the different leadership and management styles, and what is the role of EI and PQ?
+                of self and others.
               </p>
+              <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>Who shapes the different leadership and management styles, and what is the role of EI and PQ?</p>
             </div>
             <div className="expertise" style={{borderBottom: "2px solid green"}}>
               <div className='expertise-circle' style={{backgroundColor: "rgb(255, 205, 104)"}}>
@@ -149,10 +148,10 @@ function App() {
               <p style={{fontWeight: "bold"}}>Talent Management Fundamentals</p>
               <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
                 The ability to identify unique potentials within the team and empower them to perform is critical to talent 
-                management and development. A leader should be able to manage talent transitions and talent life cycles. This 
-                calls for a specific cultural mindset at various levels within the organisation. What do we learn from the 
-                lens of the world view? 
+                management and development. A leader should be able to manage talent transitions and talent life cycles, which 
+                calls for a specific cultural mindset at various levels within the organisation.
               </p>
+              <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>What do we learn from the lens of the world view? </p>
             </div>
           </div>
           <div className="expertise-div" style={{marginBottom: "6em", marginTop: "3em"}} id='skills'>
@@ -165,7 +164,7 @@ function App() {
                 Understanding the relevant and essential skills within the corporate world helps one to gain momentum in the 
                 first 100 days. Manoeuvring the various corporate ladders, knowing the corporate culture, adopting a positive 
                 mindset, and creating healthy relationships becomes key to dealing more pro-actively with challenges and 
-                improving accountability. Some of the secrets lie in every employee's user manual.
+                improving accountability. Some of the secrets lie in every person's user manual.
               </p>
             </div>
             <div className="expertise" style={{borderBottom: "2px solid green"}}>
@@ -188,8 +187,7 @@ function App() {
           {/* <video width="500" height="400">
             <source src="https://youtu.be/gwCRNKFlzw4" type="video/mp4" />
           </video> */}
-          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='education'>EDUCATION AND CERTIFICATIONS</p>
-          <p style={{fontSize: "1.2em", marginBottom: "3em"}}>EDUCATION</p>
+          <p style={{fontSize: "0.9em", marginBottom: "3em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='education'>EDUCATION AND CERTIFICATIONS</p>
 
           <Carousel responsive={responsiveCarousel}>
             <div className="carousel-div" style={{backgroundImage: `url(${educationpicture1})`}}></div>
@@ -260,8 +258,7 @@ function App() {
             />
           </div>
 
-          <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='experience'>WORK EXPERIENCE</p>
-          <p style={{fontSize: "1.2em", marginBottom: "3em"}}>WORK EXPERIENCE</p>
+          <p style={{fontSize: "0.9em", marginBottom: "3em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='experience'>WORK EXPERIENCE</p>
 
           <Carousel responsive={responsiveCarousel}>
             <div className="carousel-div" style={{backgroundImage: `url(${workexperience2})`}}></div>
@@ -397,8 +394,7 @@ function App() {
             <div className="carousel-div" style={{backgroundImage: `url(${volunteerwork3})`}}></div>
           </Carousel>
 
-          <p style={{fontSize: "0.9em", marginBottom: "0em", color: "rgba(0, 0, 0, 0.6)", marginTop: "5em", scrollMarginTop: "50px"}} id='currentreads'>CURRENT READS</p>
-          <p style={{fontSize: "1.2em", marginBottom: "3em"}}>CURRENT READS</p>
+          <p style={{fontSize: "0.9em", marginBottom: "3em", color: "rgba(0, 0, 0, 0.6)", marginTop: "5em", scrollMarginTop: "50px"}} id='currentreads'>CURRENT READS</p>
           <div className="current-reads-div">
             <div className="current-reads">
               <img src={impactplayers} alt="impactplayers" style={{width: "100%", display: "block"}}/>
