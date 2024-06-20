@@ -2,7 +2,7 @@
   "name": "linet-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://darryl22.github.io",
+  "homepage": "http://linetokumu-portfolio.info/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
