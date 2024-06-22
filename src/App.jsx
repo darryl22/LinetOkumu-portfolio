@@ -112,7 +112,7 @@ function App() {
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
             Linet is a Professional with over 21 years of experience in the Aviation industry, having resided 
             in Dubai since 2003. An Aviation enthusiast with in-depth experience and passion in Leadership, Learning 
-            and development and Talent Management.
+            and Development and Talent Management.
           </p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
             Linet started her career in 2002 with Barclays Bank Kenya and soon after moved to Emirates Airline in 2003. Linet 
