@@ -54,6 +54,7 @@
 .header-title{
     font-size: 3em;
     font-family: "'Playfair Display SC', serif";
+    margin-bottom: 0em;
 }
 
 .menu-icon{
@@ -131,7 +132,7 @@
 
 .right-content-header{
     background-image: url(./assets/picture2.jpg);
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
