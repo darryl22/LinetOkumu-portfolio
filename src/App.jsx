@@ -209,7 +209,7 @@ function App() {
 
           <div className="education" style={{marginBottom: "6em", marginTop: "3em"}}>
             <Accordion
-              textContent="Aviation Security (AVSEC) Professional Management Course (PMC)"
+              textContent="Aviation Security (AVSEC) Professional Management Course (PMC) - November 2024"
               description="Courses completed - Global AVSEC Standards, Threats to Civil Aviation, Risk Management, Airport Design and Infrastructure, Finance, Access Control, Catering Security, Screening, Project Management, Human Resources, Technology, Quality Control, Emergency Response, International Co-operation and Facilitation."
               title="Professional Management Course (AVSEC PMC)"
               image={concordia}
