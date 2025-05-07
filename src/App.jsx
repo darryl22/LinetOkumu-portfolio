@@ -21,6 +21,8 @@ import ecu from './assets/ecu-australia.png'
 import cipd from './assets/cipd.png'
 import iata from './assets/iata.png'
 import maseno from './assets/maseno.png'
+import concordia from "./assets/concordia.png"
+import icao from "./assets/icao.png"
 import volunteerwork1 from './assets/volunteerwork1.jpg'
 import volunteerwork2 from './assets/volunteerwork2.jpg'
 import volunteerwork3 from './assets/volunteerwork3.jpg'
@@ -39,6 +41,8 @@ import workexperience3 from './assets/workexperience3.jpg'
 import bookpicture1 from './assets/bookpicture1.jpg'
 import bookpicture2 from './assets/bookpicture2.jpg'
 import bookpicture3 from './assets/bookpicture3.jpg'
+import myManual from "./assets/testdownload.pdf"
+import websitevideo from "./assets/websitevideo.mp4"
 
 
 function App() {
@@ -80,6 +84,7 @@ function App() {
         <p><span style={{color: "#2c98f0"}}>TRAINING MANAGER</span> IN THE UAE</p>
         <div className="nav-links-div">
           <a href="#about" className="nav-links">ABOUT</a>
+          <a href={myManual} className="nav-links" download="mymanual.pdf">MY USER MANUAL</a>
           <a href="#skills" className="nav-links">EXPERTISE</a>
           <a href="#education" className="nav-links">EDUCATION</a>
           <a href="#experience" className="nav-links">EXPERIENCE</a>
@@ -95,6 +100,7 @@ function App() {
         <p><span style={{color: "#2c98f0"}}>TRAINING MANAGER</span> IN THE UAE</p>
         <div className="nav-links-div">
           <a href="#about" className="nav-links" onClick={() => setMenuOpen(false)}>ABOUT</a>
+          <a href={myManual} className="nav-links" download="mymanual.pdf">MY USER MANUAL</a>
           <a href="#skills" className="nav-links" onClick={() => setMenuOpen(false)}>EXPERTISE</a>
           <a href="#education" className="nav-links" onClick={() => setMenuOpen(false)}>EDUCATION</a>
           <a href="#experience" className="nav-links" onClick={() => setMenuOpen(false)}>EXPERIENCE</a>
@@ -110,7 +116,7 @@ function App() {
         <div style={{margin: "0px 2em"}}>
           <p style={{fontSize: "0.9em", marginBottom: "1em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='about'>ABOUT</p>
           <p style={{lineHeight: "1.7", color: "rgba(0, 0, 0, 0.7)"}}>
-            Linet is a Professional with over 21 years of experience in the Aviation industry, having resided 
+            Linet is a Professional with over 22 years of experience in the Aviation industry, having resided 
             in Dubai since 2003. An Aviation enthusiast with in-depth experience and passion in Leadership, Learning 
             and Development and Talent Management.
           </p>
@@ -182,7 +188,7 @@ function App() {
           </div>
 
           <div className="parallax">
-            <p>Over 20 years of experience</p>
+            <p>Over 22 years of experience</p>
           </div>
           {/* <video width="500" height="400">
             <source src="https://youtu.be/gwCRNKFlzw4" type="video/mp4" />
@@ -202,6 +208,13 @@ function App() {
           </Carousel>
 
           <div className="education" style={{marginBottom: "6em", marginTop: "3em"}}>
+            <Accordion
+              textContent="Aviation Security (AVSEC) Professional Management Course (PMC)"
+              description="Courses completed - Global AVSEC Standards, Threats to Civil Aviation, Risk Management, Airport Design and Infrastructure, Finance, Access Control, Catering Security, Screening, Project Management, Human Resources, Technology, Quality Control, Emergency Response, International Co-operation and Facilitation."
+              title="Professional Management Course (AVSEC PMC)"
+              image={concordia}
+              image2={icao}
+            />
             <Accordion 
               textContent="Developing Yourself As A Leader. January - April 2024"
               description="Courses completed - Being ready as a High-Potential Leader, Understanding Your Leadership Profile, Design Thinking for Your Trajectory, Nurturing a Leadership Mindset, Transitions, Hire Your Next Job, Momentum, Crafting Your Story, Negotiating Your Career as a Rebel Talent, The Qualified Self, Improvising, Thriving, Coaching for Talent Development *Received Executive Coaching Sessions*."
@@ -258,6 +271,9 @@ function App() {
             />
           </div>
 
+          <video style={{width: "100%", height: "40vh"}} controls src={websitevideo} typeof='video/mp4'>
+          </video>
+
           <p style={{fontSize: "0.9em", marginBottom: "3em", color: "rgba(0, 0, 0, 0.6)", scrollMarginTop: "50px"}} id='experience'>WORK EXPERIENCE</p>
 
           <Carousel responsive={responsiveCarousel}>
@@ -267,6 +283,24 @@ function App() {
           </Carousel>
 
           <div className="timeline" style={{marginBottom: "4em", marginTop: "4em"}}>
+            <div className="timeline-container left-arrow">
+              <div className="timeline-content">
+                <div style={{display: "flex", flexDirection: "column"}}>
+                  <h2 style={{marginTop: "10px", marginBottom: "10px"}}>Head of Training – Aircrew | Ground Personnel | Standards & Compliance</h2>
+                  <p style={{marginTop: "0px", color: "gray"}}>EMIRATES GROUP SECURITY</p>
+                </div>
+                <p>
+                  Lead and manage all Emirates Group Security Training (EGST) activities, setting and executing strategic learning 
+                  initiatives to deliver world-class aviation security training. Oversee the design, development, and delivery of 
+                  security training programs for flight and cabin crew, as well as specialist and operational training across all 
+                  ground operations and security personnel, ensuring full regulatory compliance with national and international standards. <br /> <br />
+                  Provide strategic direction and thought leadership in aviation security training, fostering innovation and operational 
+                  excellence. Engage with internal and external stakeholders to ensure training solutions align with business objectives 
+                  and regulatory expectations. Contribute actively to the development and execution of Emirates Group Security’s overarching 
+                  strategy and management plans.
+                </p>
+              </div>
+            </div>
             <div className="timeline-container left-arrow">
               <div className="timeline-content">
                 <div style={{display: "flex", flexDirection: "column"}}>
@@ -430,7 +464,7 @@ function App() {
 
           <div style={{width: "100%", height: "1px", backgroundColor: "gray", marginBottom: "2em"}}></div>
           <a href="https://www.linkedin.com/in/linet-okumu/" style={{textDecoration: "none"}}>My Linkedin</a><br />
-          <p style={{marginBottom: "3em"}}>Copyright @2024 All Rights Reserved</p>
+          <p style={{marginBottom: "3em"}}>Copyright @2025 All Rights Reserved</p>
         </div>
       </div>
     </div>

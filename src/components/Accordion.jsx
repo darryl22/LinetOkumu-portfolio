@@ -2,9 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { useRef } from "react";
 
-function Accordion({title, textContent, image, description}) {
+function Accordion({title, textContent, image, image2, description}) {
 
     const [open, setOpen] = useState(false)
+    console.log(image2)
 
     function toggleAccordion(e) {
       setOpen(prev => {
@@ -27,6 +28,7 @@ function Accordion({title, textContent, image, description}) {
             </button>
             <div className="accordion-panel" style={accordionPanel}>
               <img src={image} alt="accordion image" style={{height: "4em"}}/>
+              {image2 !== undefined ? <img src={image2} alt="accordion image" style={{height: "4em"}}/> : null}
               <p style={{fontWeight: "bold"}}>{textContent}</p>
               <p>{description}</p>
             </div>
