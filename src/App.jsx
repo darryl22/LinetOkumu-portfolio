@@ -41,7 +41,7 @@ import workexperience3 from './assets/workexperience3.jpg'
 import bookpicture1 from './assets/bookpicture1.jpg'
 import bookpicture2 from './assets/bookpicture2.jpg'
 import bookpicture3 from './assets/bookpicture3.jpg'
-import myManual from "./assets/testdownload.pdf"
+import myManual from "./assets/userManual.pdf"
 import websitevideo from "./assets/websitevideo.mp4"
 
 
@@ -211,7 +211,7 @@ function App() {
             <Accordion
               textContent="Aviation Security (AVSEC) Professional Management Course (PMC) - November 2024"
               description="Courses completed - Global AVSEC Standards, Threats to Civil Aviation, Risk Management, Airport Design and Infrastructure, Finance, Access Control, Catering Security, Screening, Project Management, Human Resources, Technology, Quality Control, Emergency Response, International Co-operation and Facilitation."
-              title="Professional Management Course (AVSEC PMC)"
+              title="AVSEC Professional Management Course (PMC)"
               image={concordia}
               image2={icao}
             />
