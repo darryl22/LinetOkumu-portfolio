@@ -23,6 +23,7 @@ import iata from './assets/iata.png'
 import maseno from './assets/maseno.png'
 import concordia from "./assets/concordia.png"
 import icao from "./assets/icao.png"
+import userManualImg from "./assets/userManualimg.jpg"
 import volunteerwork1 from './assets/volunteerwork1.jpg'
 import volunteerwork2 from './assets/volunteerwork2.jpg'
 import volunteerwork3 from './assets/volunteerwork3.jpg'
@@ -48,11 +49,18 @@ import websitevideo from "./assets/websitevideo.mp4"
 function App() {
 
   const [menuOpen, setMenuOpen] = React.useState(false)
+  const [manualOpen, setManualOpen] = React.useState(false)
 
   function toggleMenu() {
     setMenuOpen(prev => {
       return !prev
     })
+  }
+
+  const manualStyles = {
+    backgroundColor: manualOpen ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)",
+    opacity: manualOpen ? "1" : "0",
+    pointerEvents: manualOpen ? "auto" : "none"
   }
 
   const leftContentStyle = {
@@ -76,6 +84,10 @@ function App() {
 
   return (
     <div className='main-content-div'>
+      <div className="usermanual-div" style={manualStyles}>
+        <img src={userManualImg} alt="usermanual" className='usermanual-img'/>
+        <img src={close} alt="close manual" className='close-usermanual' onClick={() => setManualOpen(false)}/>
+      </div>
       <img src={menu} alt="menu-icon" className='menu-icon' onClick={toggleMenu}/>
 
       <div className="left-content-div">
@@ -84,7 +96,8 @@ function App() {
         <p><span style={{color: "#2c98f0"}}>TRAINING MANAGER</span> IN THE UAE</p>
         <div className="nav-links-div">
           <a href="#about" className="nav-links">ABOUT</a>
-          <a href={myManual} className="nav-links" download="mymanual.pdf">MY USER MANUAL</a>
+          {/* <a href={myManual} className="nav-links" download="mymanual.pdf">MY USER MANUAL</a> */}
+          <p className='nav-links' style={{margin: 0}} onClick={() => setManualOpen(true)}>MY USER MANUAL</p>
           <a href="#skills" className="nav-links">EXPERTISE</a>
           <a href="#education" className="nav-links">EDUCATION</a>
           <a href="#experience" className="nav-links">EXPERIENCE</a>
@@ -100,7 +113,8 @@ function App() {
         <p><span style={{color: "#2c98f0"}}>TRAINING MANAGER</span> IN THE UAE</p>
         <div className="nav-links-div">
           <a href="#about" className="nav-links" onClick={() => setMenuOpen(false)}>ABOUT</a>
-          <a href={myManual} className="nav-links" download="mymanual.pdf">MY USER MANUAL</a>
+          {/* <a href={myManual} className="nav-links" download="mymanual.pdf">MY USER MANUAL</a> */}
+          <p className='nav-links' style={{margin: 0}} onClick={() => {setManualOpen(true); setMenuOpen(false)}}>MY USER MANUAL</p>
           <a href="#skills" className="nav-links" onClick={() => setMenuOpen(false)}>EXPERTISE</a>
           <a href="#education" className="nav-links" onClick={() => setMenuOpen(false)}>EDUCATION</a>
           <a href="#experience" className="nav-links" onClick={() => setMenuOpen(false)}>EXPERIENCE</a>
