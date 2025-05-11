@@ -93,7 +93,7 @@ function App() {
       <div className="left-content-div">
         <div className="profile-image"></div>
         <h2 style={{fontFamily: "'Playfair Display SC', serif", fontSize: "2em", marginBottom: "0em"}}>Linet Okumu</h2>
-        <p><span style={{color: "#2c98f0"}}>TRAINING MANAGER</span> IN THE UAE</p>
+        <p><span style={{color: "#2c98f0"}}>HEAD OF TRAINING</span> IN THE UAE</p>
         <div className="nav-links-div">
           <a href="#about" className="nav-links">ABOUT</a>
           {/* <a href={myManual} className="nav-links" download="mymanual.pdf">MY USER MANUAL</a> */}
@@ -110,7 +110,7 @@ function App() {
         <img src={close} alt="close-menu" className='close-menu' onClick={toggleMenu}/>
         <div className="profile-image"></div>
         <h2 style={{fontFamily: "'Playfair Display SC', serif", fontSize: "2em", marginBottom: "0em"}}>Linet Okumu</h2>
-        <p><span style={{color: "#2c98f0"}}>TRAINING MANAGER</span> IN THE UAE</p>
+        <p><span style={{color: "#2c98f0"}}>HEAD OF TRAINING</span> IN THE UAE</p>
         <div className="nav-links-div">
           <a href="#about" className="nav-links" onClick={() => setMenuOpen(false)}>ABOUT</a>
           {/* <a href={myManual} className="nav-links" download="mymanual.pdf">MY USER MANUAL</a> */}
