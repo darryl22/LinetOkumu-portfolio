@@ -39,6 +39,11 @@ import educationpicture9 from './assets/educationpicture9.jpg'
 import workexperience1 from './assets/workexperience1.jpg'
 import workexperience2 from './assets/workexperience2.jpg'
 import workexperience3 from './assets/workexperience3.jpg'
+import workexperience4 from './assets/workexperience4.jpg'
+import workexperience5 from './assets/workexperience5.jpg'
+import workexperience6 from './assets/workexperience6.jpg'
+import workexperience7 from './assets/workexperience7.jpg'
+import workexperience8 from './assets/workexperience8.jpg'
 import bookpicture1 from './assets/bookpicture1.jpg'
 import bookpicture2 from './assets/bookpicture2.jpg'
 import bookpicture3 from './assets/bookpicture3.jpg'
@@ -294,6 +299,11 @@ function App() {
             <div className="carousel-div" style={{backgroundImage: `url(${workexperience2})`}}></div>
             <div className="carousel-div" style={{backgroundImage: `url(${workexperience1})`}}></div>
             <div className="carousel-div" style={{backgroundImage: `url(${workexperience3})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${workexperience4})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${workexperience5})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${workexperience6})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${workexperience7})`}}></div>
+            <div className="carousel-div" style={{backgroundImage: `url(${workexperience8})`}}></div>
           </Carousel>
 
           <div className="timeline" style={{marginBottom: "4em", marginTop: "4em"}}>
